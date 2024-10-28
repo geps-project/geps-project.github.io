@@ -24,8 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>GEPS: Boosting Generalization in Parametric PDE
-    Neural Solvers through Adaptive Conditioning</title>
+  <title>GEPS</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -53,21 +52,26 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">GEPS: Boosting Generalization in Parametric PDE
+              Neural Solvers through Adaptive Conditioning</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://www.isir.upmc.fr/personnel/kassai/" target="_blank">Armand Kassaï Koupaï</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://www.isir.upmc.fr/personnel/mifsutbenet/" target="_blank">Jorge Misfut-Bene</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://yuan-yin.github.io/" target="_blank">Yuan Yin</a><sup>2</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://webia.lip6.fr/~vittaut/" target="_blank">Jean-Noë Vittau</a><sup>3</sup>,</span>
+                      <span class="author-block">
+                        <a href="https://pages.isir.upmc.fr/gallinari/" target="_blank">Patrick Gallinari</a><sup>1,4</sup</span>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>1</sup>Sorbonne Université ISIR, <sup>2</sup>Valeo.ai, <sup>3</sup>Sorbonne Université LIP6, <sup>4</sup>Criteo AI Lab<br>
+                    <span style="font-weight: bold;">NeurIPS 2024 </span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -83,20 +87,9 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/itsakk/geps" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -124,22 +117,18 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser Image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="static/images/setting.png" alt="Teaser Image" id="tree" height="100%" style="width: 100%; height: auto;">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        The chosen multi-environment setting for GEPS for the Kolmogorov PDE. GEPS leverages information from multiple environments, each environment defined by specif PDE parameter values, to boost generalization in parametric PDEs neural solvers.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -149,7 +138,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Solving parametric partial differential equations (PDEs) presents significant challenges for data-driven methods due to the sensitivity of spatio-temporal dynamics to variations in PDE parameters. Machine learning approaches often struggle to capture this variability. To address this, data-driven approaches learn parametric PDEs by sampling a very large variety of trajectories with varying PDE parameters. We first show that incorporating conditioning mechanisms for learning parametric PDEs is essential and that among them, \textit{adaptive conditioning}, allows stronger generalization. As existing adaptive conditioning methods do not scale well with respect to the number of PDE parameters, we propose GEPS, a simple adaptation mechanism to boost GEneralization in Pde Solvers via a first-order optimization and low-rank rapid adaptation of a small set of context parameters. We demonstrate the versatility of our approach for both fully data-driven and for physics-aware neural solvers. Validation performed on a whole range of spatio-temporal forecasting problems demonstrates excellent performance for generalizing to unseen conditions including initial conditions, PDE coefficients, forcing terms and solution domain.
           </p>
         </div>
       </div>
@@ -158,128 +147,92 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
 <section class="hero is-small">
+  <div class = "container is-max-desktop">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+      <h2 class="title is-3">Motivating the adaptive conditioning approach</h2>
+      <div class="level-set has-text-justified">
+            <p>
+              One goal of this paper is to demonstrate the relevance of a multi-environment setting, compared to a more traditional ERM method, which advocate the use of large datasets to boost generalization. We thus compare it with an ERM approach when scaling the number of training trajectories and environments. The models are trained on a range of environments - corresponding to different coefficients of the underlying PDE - and evaluated on the same environments with different initial conditions.<br><br>
+            </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+      <img src="static/images/empirical_results.png" alt="key observation" class="center-image">
+      <h3>
+        <b>Comparison of ERM methods approaches (shades of blue) and Poseidon (green) with our adaptive conditioning approach GEPS (red).</b> We evaluate the performance of different methods when increasing the number of training trajectories (at the top) and when increasing the number of environements (at the bottom) for two PDE equations: Gray-Scott (left) and Burgers (right).
+      </h3><br>
+      <p>
+        We experimentally show that traditional ERM methods fail to capture the diversity of behaviors and their performance stagnate when increasing the number of training trajectories per environments and environments. Poseidon is able to capture such diversity, but its performance is lower compared to GEPS while pretrained on very large datasets.  GEPS benefits from being trained on a large amounts of
+        environments and training trajectories, as its performance scale respectively with the number of trajectories and environements.
+      </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="hero is-small">
+  <div class = "container is-max-desktop">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">GEPS framework</h2>
+      <div class="level-set has-text-justified">
+            <p>
+              We introduce our framework for learning to adapt neural PDE solvers to unseen environments. It leverages a 1<sup>st</sup> order adaptation rule for low-rank and rapid adaptation to a new PDE instance. We consider two common settings for learning PDE solvers; the first one leverages pure data-driven approaches and the second leverages priors information for learning hybrid neural PDE solvers. <br><br>
+            </p>
+      </div>
+      <img src="static/images/archi_hybrid.png" alt="key observation" class="center-image">
+      <h3>
+        <b>Our adaptation framework for for a hybrid model. For the agnostic model, the physics component (bottom left) is removed.</b> Blocks in blue refer to the physical (bottom left) and data-driven (bottom right) modules. Blocks in pink refer to the trainable modules. The green block describes the adaptation mechanism for the physical (top left) and data-driven (top right) component. <b>c<sup>e</sup></b> is the context used to adapt the two components.
+      </h3><br>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="hero is-small">
+  <div class = "container is-max-desktop">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Results</h2>
+      <div class="level-set has-text-justified">
+            <p>
+              We provide quantitative results of our methods compared to other adaptive conditioning approaches.<br><br>
+            </p>
+      </div>
+      <img src="static/images/results.png" alt="key observation" class="center-image">
+      <h3>
+        <b>In-distribution and Out-distribution results on 32 new test trajectories per environment.</b> For out-distribution, models are fine-tuned on 1 trajectory per environment. Metric is the relative L2. '--' indicates inference has diverged.
+      </h3>
+      <br>
+      </div>
+    </div>
+    <div class="level-set has-text-justified">
+      <p>
+        We provide qualtitative results for the Burgers equation. For more details, please refer to our paper.<br><br>
+      </p>
+    </div>
+    <img src="static/images/quali_results.png" alt="key observation" class="center-image">
     </div>
   </div>
 </div>
 </div>
+</div>
 </section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{kassai2024geps,
+  title={GEPS: Boosting Generalization in Parametric PDE Neural Solvers through Adaptive Conditioning},
+  author={Kassaï Koupaï, Armand and Mifsut Benet, Jorge and Vittaut, Jean-Noël and Gallinari, Patrick},
+  journal={38th Conference on Neural Information Processing Systems (NeurIPS 2024)},
+  year={2024}
+  }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -290,11 +243,8 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
         </div>
